@@ -168,13 +168,15 @@ input[name="post"]:hover {
   font-size: 1rem;
 }
 
-
+    textarea {
+      width:80%;
+    }
 
 .title-input {
   width: 80%;
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 480px){
   .wrapper {
     display: grid;
     grid-template-columns: 100%;

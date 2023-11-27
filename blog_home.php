@@ -29,16 +29,13 @@
           $imageToUpload_separate = explode('.', $imageName);
           $imageExtension = strtolower(end($imageToUpload_separate));
           $target_folder = 'images/'.$imageName; 
-
           $extension = array('jpg', 'jpeg', 'png', 'svg', 'avif', 'webp', 'gif');
-          if(!empty($_POST["filetoupload"])){
             if(in_array($imageExtension, $extension)){
               
               move_uploaded_file($imageTemp, $target_folder);
             }else {
               header("location: ../php-pages/image-validation.php");
             }
-          }
 
           $sql = "INSERT INTO `blog` (blog_title, content, image, keywords, publisher_name) VALUES('$title', '$content', '$target_folder', '$jsonKeyword', '$username')";
           mysqli_query($conn, $sql);

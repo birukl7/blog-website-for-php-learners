@@ -1,4 +1,7 @@
-
+<?php
+  echo "<h1> Image extention is not supported. please upload JPEG, JPG, PNG, GIF, SVG, AVIF and WEBP extentions only.<h1>";
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +10,6 @@
   <title>Document</title>
 </head>
 <body>
-<?php
-  echo "<h1> Image extention is not supported. please upload JPEG, JPG, PNG, GIF, SVG, AVIF and WEBP extentions only.<h1>";
- 
-?>
 <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
   <input type="submit" value="Go Back" name="goback">
 </form>
